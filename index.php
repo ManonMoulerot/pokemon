@@ -1,9 +1,12 @@
 <?php 
 require 'form.php';
 require 'pdo.php';
+require 'models/Pokemon.php';
 $form = new Formulaire($_POST);
+$pokemon = new Pokemon();
+echo $pokemon->selectionType('acier');
+echo $pokemon->selectionPlusresist('acier');
 
-selectionall();
 ?>
 
 
@@ -17,10 +20,8 @@ selectionall();
 <body>
     <form action="" method="post">
     <?php 
-    echo $form->input('name','text');
-    echo $form->input('date','date');
+    echo $form->input('type','text');
     echo $form->submit();
-
     ?>
     </form>
 </body>
