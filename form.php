@@ -1,6 +1,5 @@
 <?php
-class Formulaire
-{
+class Formulaire{
         /*@ $data:tableau*/
     private $data; //pour enregistrer les données dans un tableau
     public function __construct($data = array()){

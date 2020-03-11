@@ -5,7 +5,8 @@ require 'models/Pokemon.php';
 $form = new Formulaire($_POST);
 $pokemon = new Pokemon();
 echo $pokemon->selectionType('acier');
-echo $pokemon->selectionPlusresist('acier');
+echo $pokemon->selectionPlusresistDefensif('acier');
+echo $pokemon->selectionPlusresistOffensif('acier');
 
 ?>
 
