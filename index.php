@@ -20,7 +20,7 @@ echo $pokemon->selectionPlusresist('acier');
 <body>
     <form action="" method="post">
     <?php 
-    echo $form->input('type','text');
+    echo $form->input('type','date');
     echo $form->submit();
     ?>
     </form>
