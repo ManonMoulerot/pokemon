@@ -27,4 +27,4 @@ class Formulaire
        return '<input type="submit" value="envoyer">';
     }    
 }  
-
+//test
