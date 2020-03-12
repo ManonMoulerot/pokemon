@@ -1,12 +1,26 @@
 <?php 
-require 'form.php';
+// form
+require_once('./models/form.php');
+$form = new Formulaire($_GET);
+require ('template/form.html.php');
 require 'pdo.php';
-require 'models/Pokemon.php';
-$form = new Formulaire($_POST);
+require_once('./models/Pokemon.php');
+
 $pokemon = new Pokemon();
-echo $pokemon->selectionType('acier');
-echo $pokemon->selectionPlusresistDefensif('acier');
-echo $pokemon->selectionPlusresistOffensif('acier');
+$listePokemonDefensif = $pokemon->selectionPlusresistDefensif('feu', '2', '2');
+require ('template/liste-defensif.html.php');
+$listePokemonDefensif = $pokemon->selectionPlusresistDefensif('feu', '0.5', '0');
+require ('template/liste-defensif.html.php');
+$listePokemonOffensif = $pokemon->selectionPlusresistOffensif('feu');
+$listeParType = $pokemon->selectionPokemonParType('feu');
+$listeType = $pokemon->selectionType('feu');
+require ('template/liste-offensif.html.php');
+require ('template/listeParType.html.php');
+require ('template/listeType.html.php');
+
+
+
+
 
 ?>
 
@@ -19,11 +33,6 @@ echo $pokemon->selectionPlusresistOffensif('acier');
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
-    <?php 
-    echo $form->input('type','text');
-    echo $form->submit();
-    ?>
-    </form>
+    
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
-class Formulaire{
+class Formulaire
+{
         /*@ $data:tableau*/
     private $data; //pour enregistrer les données dans un tableau
     public function __construct($data = array()){
@@ -20,10 +21,15 @@ class Formulaire{
     {
         return "<label for='".$name."'>".$name." : </label><input type='".$type."' name='".$name."' id='".$name."' value='". $this->getValue($name) ."'></br>";
     }
+
+    public function getType($type){
+        isset($this->$_GET['type']) ? $_GET['type'] = $type : $type=null;
+        return $type;
+    }
     
     public function submit() // Une méthode qui un submit
     {
        return '<input type="submit" value="envoyer">';
     }    
 }  
-//test
+

@@ -27,4 +27,10 @@ function getpdo(){
     //     }
     // }
 
+                // $sql2 = "select * FROM esttype inner join pokemon on esttype.id_pok = pokemon.id_pok where esttype.type_pok='".$resultrow1['nom_type']."'"; //instruction/requete sql
+            // $result2=$this->pdo->query($sql2); //demande a la base de donnée de executer la requete
+            // while ($resultrow2=$result2->fetch(PDO::FETCH_ASSOC)) {
+            //     echo "<p>".$resultrow2['nom_pok']."</p>";
+            // }
+
 
