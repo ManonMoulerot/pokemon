@@ -21,6 +21,11 @@ class Formulaire
     {
         return "<label for='".$name."'>".$name." : </label><input type='".$type."' name='".$name."' id='".$name."' value='". $this->getValue($name) ."'></br>";
     }
+
+    public function select($name,$type) // Une méthode qui popera les inputs
+    {
+        return "<label for='".$name."'>".$name." : </label><input type='".$type."' name='".$name."' id='".$name."' value='". $this->getValue($name) ."'></br>";
+    }
     
     public function submit() // Une méthode qui un submit
     {

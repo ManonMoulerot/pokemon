@@ -4,11 +4,13 @@ require 'pdo.php';
 require 'models/Pokemon.php';
 $form = new Formulaire($_POST);
 $pokemon = new Pokemon();
-echo $pokemon->selectionType('spectre');
+echo $pokemon->selectionType();
 echo $pokemon->selectionPlusresistDefensif('spectre','0.5','0','pokemondef');
 echo "<h1>lol</h1>";
 echo $pokemon->selectionPlusresistDefensif('spectre','2','2','pokemondef');
-
+echo "<h1>lol</h1>";
+echo $pokemon->selectionPlusresistOffensif('spectre');
+echo $pokemon->selectionPokemonParType('feu');
 ?>
 
 
