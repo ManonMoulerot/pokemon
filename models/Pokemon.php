@@ -42,7 +42,6 @@ class Pokemon {
         $sql1 = "select * FROM ".$types." inner join type on ".$types.".id_type_tab=type.id_type where defensif>=$resistanceplus && defensif<=$resistancemoins order by defensif asc"; //instruction/requete sql
          //demande a la base de donnée de executer la requete
          $result2=$this->pdo->query($sql1);
-
          return $result2;
     }
 

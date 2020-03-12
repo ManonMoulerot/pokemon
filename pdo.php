@@ -11,26 +11,5 @@ function getpdo(){
     return $connect;
 }
 
-    // public function selectionall($table){
-    //     $result = $this->pdo->prepare("select * FROM $table ");
-    //     $result->execute();
-    //     while ($resultrow=$result->fetch(PDO::FETCH_ASSOC)) {
-    //         echo $resultrow['offensif'];
-    //     }
-    // }
-    
-    // public function selectionPlusResistant($types){
-    //     $sql = "select * FROM ".$types." inner join type on ".$types.".id_type_tab=type.id_type order by defensif asc"; //instruction/requete sql
-    //     $result=$this->pdo->query($sql); //demande a la base de donnée de executer la requete
-    //     while ($resultrow1=$result->fetch(PDO::FETCH_ASSOC)) {
-    //         echo $resultrow1['nom_type'];
-    //     }
-    // }
-
-                // $sql2 = "select * FROM esttype inner join pokemon on esttype.id_pok = pokemon.id_pok where esttype.type_pok='".$resultrow1['nom_type']."'"; //instruction/requete sql
-            // $result2=$this->pdo->query($sql2); //demande a la base de donnée de executer la requete
-            // while ($resultrow2=$result2->fetch(PDO::FETCH_ASSOC)) {
-            //     echo "<p>".$resultrow2['nom_pok']."</p>";
-            // }
 
 
