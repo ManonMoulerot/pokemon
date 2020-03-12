@@ -11,6 +11,8 @@ echo $pokemon->selectionPlusresistDefensif('spectre','2','2','pokemondef');
 echo "<h1>lol</h1>";
 echo $pokemon->selectionPlusresistOffensif('spectre');
 echo $pokemon->selectionPokemonParType('feu');
+echo "<h1>lol</h1>";
+echo $pokemon->selectionPlusresistDefensif('spectre','2','2','pokemondef');
 ?>
 
 
