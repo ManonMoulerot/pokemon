@@ -17,5 +17,8 @@
     } 
     require ('template/ajout-type.html.php');
     require ('template/form-modif.html.php');
+    require ('template/form-attaque-defense.html.php')
+
+
 ?>
 
