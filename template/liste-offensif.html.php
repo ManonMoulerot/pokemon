@@ -1,7 +1,7 @@
 <?php
     //rappeler l'objet et la function pour la regenerer un coup
       $pokemon = new Pokemon();
-      echo "<h1>liste-offensif</h1>";
+      echo "<h1>Il est fort contre les types</h1>";
    while ($resultrow1=$listePokemonOffensif->fetch(PDO::FETCH_ASSOC)) {
     echo "<h2>".$resultrow1['nom_type']."</h2>";
     $pokemon->setType($resultrow2['nom_type']); 

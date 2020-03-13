@@ -3,20 +3,24 @@
 require_once('./models/form.php');
 $form = new Formulaire($_GET);
 require ('template/form.html.php');
-require 'pdo.php';
-require_once('./models/Pokemon.php');
 
-$pokemon = new Pokemon();
-$listePokemonDefensif = $pokemon->selectionPlusresistDefensif('feu', '2', '2');
-require ('template/liste-defensif.html.php');
-$listePokemonDefensif = $pokemon->selectionPlusresistDefensif('feu', '0.5', '0');
-require ('template/liste-defensif.html.php');
-$listePokemonOffensif = $pokemon->selectionPlusresistOffensif('feu');
-$listeParType = $pokemon->selectionPokemonParType('feu');
-$listeType = $pokemon->selectionType('feu');
-require ('template/liste-offensif.html.php');
+if( isset($_GET['type'])){
+     $type = $_GET['type'];
+    } else { $type = '';
+    }
+if($type != ''){
+// require 'pdo.php';
+require_once('./models/Pokemon.php');
+$pokemon = new Pokemon(); 
+$listeParType = $pokemon->selectionPokemonParType($type);
 require ('template/listeParType.html.php');
-require ('template/listeType.html.php');
+$listePokemonDefensif2 = $pokemon->selectionPlusresistDefensif($type, '0.5', '0');
+require ('template/liste-defensif2.html.php');
+$listePokemonDefensif = $pokemon->selectionPlusresistDefensif($type, '2', '2');
+require ('template/liste-defensif.html.php');
+$listePokemonOffensif = $pokemon->selectionPlusresistOffensif($type);
+require ('template/liste-offensif.html.php');
+}
 
 
 
