@@ -25,33 +25,48 @@ class Pokemon {
         return $result;
     }
 
-
-
     //function qui permet de sélectionner un type de pokémon et de ressortir tous les noms sous la formes d'une liste
     public function selectionPokemonParType($types){
         $sql = "select * FROM esttype inner join pokemon on esttype.id_pok = pokemon.id_pok where esttype.type_pok='".$types."'"; //instruction/requete sql
         $result3=$this->pdo->query($sql); //demande a la base de donnée de executer la requete
-
         return $result3;
-      
     }
 
-
     //function qui permet de sélectionner un type de pokémon et de ressortir tous les types (dans la fourchette de 2 à 0 possible)qui ont une faible attack contre lui
-    public function selectionPlusresistDefensif($types,$resistancemoins,$resistanceplus){
-        $sql1 = "select * FROM ".$types." inner join type on ".$types.".id_type_tab=type.id_type where defensif>=$resistanceplus && defensif<=$resistancemoins order by defensif asc"; //instruction/requete sql
+    public function selectionPlusresistDefensif($type,$resistancemoins,$resistanceplus){
+        $sql1 = "select * FROM ".$type." inner join type on ".$type.".id_type_tab=type.id_type where defensif>=$resistanceplus && defensif<=$resistancemoins order by defensif asc"; //instruction/requete sql
          //demande a la base de donnée de executer la requete
          $result2=$this->pdo->query($sql1);
          return $result2;
     }
 
-
     //function qui permet de sélectionner un type de pokémon et de ressortir tous les types les plus fort contre lui
-    public function selectionPlusresistOffensif($types){
-        $sql1 = "select * FROM ".$types." inner join type on ".$types.".id_type_tab=type.id_type where offensif=2"; //instruction/requete sql
+    public function selectionPlusresistOffensif($type){
+        $sql1 = "select * FROM ".$type." inner join type on ".$type.".id_type_tab=type.id_type where offensif=2"; //instruction/requete sql
         $result1=$this->pdo->query($sql1);
-
         return $result1;
     }
-    
+    // fonction qui ajoute un type de pokemon dans la table Type
+    public function ajoutType($type){
+        $sqlAjout = "INSERT INTO type(id_type, nom_type, img_type) VALUES ('','".$type."','img/".$type.".png')";
+        $result5 = $this->pdo->query($sqlAjout);
+        return $result5;
+    }
+    // fonction qui crée une table avec le type en nom de cette table
+    public function creationTableType($type){
+        $sqlCreate = "CREATE TABLE ".$type." (`id_type_tab` int(11) NOT NULL,
+        `offensif` float NOT NULL,
+        `defensif` float NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+        $result6 = $this->pdo->query($sqlCreate);
+        return $result6;
+    }
+    // fonction qui crée la relation entre les tables
+    public function alterTableType($type){
+        $sqlAlterTable = "ALTER TABLE ".$type."
+        ADD CONSTRAINT `".$type."_ibfk_1` FOREIGN KEY (`id_type_tab`) REFERENCES `type` (`id_type`); ";
+        $result7 = $this->pdo->query($sqlAlterTable);
+        return $result7;
+    }
+
+
 }

@@ -9,7 +9,6 @@ if( isset($_GET['type'])){
     } else { $type = '';
     }
 if($type != ''){
-// require 'pdo.php';
 require_once('./models/Pokemon.php');
 $pokemon = new Pokemon(); 
 $listeParType = $pokemon->selectionPokemonParType($type);
