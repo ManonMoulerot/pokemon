@@ -46,16 +46,15 @@ class Formulaire
        return '<input type="submit" value="envoyer">';
     }
 
-    public function inputFichier($action) // Une méthode qui un submit
+
+    public function inputFichier() // Une méthode qui pop un input file et son bouton
     {
-        echo '<form enctype="multipart/form-data" action="'.$action.'" method="post">';
         echo '<input type="hidden" name="dossier" value="image"/>';
         echo '  <input type="file" name="file" id="file" />';
         echo '  <input class="button" type="submit" />';
-        echo '</form>';
     }    
 
-    public function fichier($repertoireDestination,$nomFichier,$nouveauNom) // Une méthode qui un submit
+    public function fichier($repertoireDestination,$nomFichier,$nouveauNom) //qui envoi le fichier dans le chemin données avec son nouveau nom
     {
 
                 $nomFichier=$_FILES['file']['name'];
@@ -76,9 +75,10 @@ class Formulaire
                     echo "Le fichier n'a pas été uploadé (trop gros ?) ou ".
                             "Le déplacement du fichier temporaire a échoué".
                             " vérifiez l'existence du répertoire ".$repertoireDestination;
-                }}
+                }
 
     }
 
+}  
 }  
 
