@@ -118,7 +118,7 @@ include("header.php")
                 
                 if( isset($_GET['type2'])){
                     $type = $_GET['type2'];
-                    echo "<div class='d-flex justify-content-center font-size1 font-weight-bold mt-4'>".$type."</div>" ;
+                    echo "<div class='d-flex justify-content-center font-size1 font-weight-bold mt-4'><img src='img/".$type.".png' alt='".$type."'></div>" ;
                    } else { $type = '';
                    }
                if($type != ''){
@@ -219,7 +219,7 @@ include("header.php")
             $listeParType = $pokemon->selectionPokemonParType($type);
             require ('template/listeParType3.html.php');
             }
-            echo "<div class='d-flex justify-content-center font-size1 font-weight-bold mt-4'>".$type."</div>" ;
+            echo "<div class='d-flex justify-content-center font-size1 font-weight-bold mt-4'><img src='img/".$type.".png' alt='".$type."'></div>" ;
             ?>
 
 
