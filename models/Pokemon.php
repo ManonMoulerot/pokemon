@@ -69,8 +69,18 @@ class Pokemon {
     }
        // fonction qui crée la relation entre les tables
        public function ajoutDefAttaqueType($type){
-        $sqlAjoutDefAttaque = "INSERT INTO ".$type."(`id_type_tab`, `offensif`, `defensif`) VALUES ('',[value-2],[value-3])";
-        $result8 = $this->pdo->query($sqlAjoutDefAttaque);
+        $type = $_GET['hidden'];
+        $idType = $_GET['id_type'];
+        $attaque = $_GET['attaque'];
+        $defense = $_GET['defense'];
+        $tab = array(
+            'id_type_tab' => $idType,
+            'offensif'=> $attaque,
+            'defensif' => $defense );
+        $sqlAjoutDefAttaque = "INSERT INTO ".$type."(:id_type_tab, :offensif, :defensif)";
+        // $result8 = $this->pdo->query($sqlAjoutDefAttaque);
+        $result8 = $this->pdo->prepare($sqlAjoutDefAttaque);
+        $result8->execute($tab);
         return $result8;
     }
 

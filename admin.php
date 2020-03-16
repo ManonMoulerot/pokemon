@@ -21,8 +21,11 @@
     if( isset($_GET['type2'])){
         $type = $_GET['type2'];
         require ('template/form-attaque-defense.html.php');
-
-       } else { $type = '';
+        if(isset($_GET['hidden'])){
+            $ajoutDefAttaque = $pokemon->ajoutDefAttaqueType($type);
+        }
+       } else { 
+           $type = '';
     }
 
 
