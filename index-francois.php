@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="style.css" />
     <style>
         .bg-beige {
-            background-color: #FFFFAA;
+            /* background-color: rgb(253, 255, 230); */
+            background-color: red;
         }
 
         .custom-select {
@@ -38,32 +39,18 @@
 
 
 
-<?php   
+    <?php   
 include("header.php")
 ?>
 
     <section class="container-fluid bg-beige pb-5">
         <div class="container mb-5">
-            <h1 class="text-center font-weight-bolder pt-6">Bienvenue sur l'application Poketype</h1>
-            <h2 class="text-center mt-4 mb-5">l'appli qui te permet de savoir quel pokémon utiliser contre tes adversaires !</h2>
+            <p class="text-center font-weight-bolder pt-4">Bienvenue sur l'application Poketype</p>
+            <p class="text-center my-4">l'appli qui te permet de savoir quel pokémon utiliser contre tes adversaires !
+            </p>
             <div class="bg-white py-4">
-                <?php 
-                require_once('./models/form.php');
-                $form = new Formulaire($_GET);
-                require ('template/form1.html.php');
-                if( isset($_GET['type'])){
-                    $type = $_GET['type'];
-                   } else { $type = '';
-                   }
-               if($type != ''){
-                require_once('./models/Pokemon.php');
-                $pokemon = new Pokemon(); 
-                $listePokemonDefensif = $pokemon->selectionPlusresistDefensif($type, '2', '2');
-                require ('template/liste-defensif-list.html.php');
-               }
-                ?>
-                <!-- <input type="submit"> -->
-                <!-- <form action="" method="post">
+                <p class="text-center pt-5 ">Mon adversaire utilise un pokemon de type:</p>
+                <form action="" method="post">
                     <div class=" row justify-content-center pt-3 pb-5">
                         <select class="browser-default custom-select" name="" id="">
                             <option value="">eau</option>
@@ -74,11 +61,11 @@ include("header.php")
                     <div class="row justify-content-center">
                         <button type="submit" class="btn btn-outline-default waves-effect">Recherche</button>
                     </div>
-                </form> -->
+                </form>
 
-                <!-- <p class="text-center pt-5">Pour taper fort je doit utiliser un pokemon de type:</p> -->
+                <p class="text-center pt-5">Pour taper fort je doit utiliser un pokemon de type:</p>
 
-                <!-- <div class="ml-0 my-2 my-lg-0 row justify-content-center pt-3 pb-5 container">
+                <div class="ml-0 my-2 my-lg-0 row justify-content-center pt-3 pb-5 container">
                     <select class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 col-lg-2 browser-default custom-select"
                         name="" id="">
                         <option value="">françois++</option>
@@ -103,7 +90,7 @@ include("header.php")
 
                         <option value="">feu</option>
                     </select>
-                </div> -->
+                </div>
             </div>
 
 
@@ -111,25 +98,8 @@ include("header.php")
 
 
             <div class="bg-white mt-5 p-4">
-                <?php 
-                require_once('./models/form.php');
-                $form = new Formulaire($_GET);
-                require ('template/form2.html.php');
-                
-                if( isset($_GET['type2'])){
-                    $type = $_GET['type2'];
-                    echo "<div class='d-flex justify-content-center font-size1 font-weight-bold mt-4'>".$type."</div>" ;
-                   } else { $type = '';
-                   }
-               if($type != ''){
-
-                $listePokemonDefensif2_1 = $pokemon->selectionPlusresistDefensif($type, '0.5', '0');
-                require ('template/liste-defensif2.1.html.php');
-                $listePokemonDefensif_1 = $pokemon->selectionPlusresistDefensif($type, '2', '2');
-                require ('template/liste-defensif.1.html.php');
-                }
-                ?>
-                <!-- <form action="" method="post">
+                <p class="text-center font-weight-bolder pt-4">Mon pokémon est de type:</p>
+                <form action="" method="post">
                     <div class="row justify-content-center pt-3 pb-5">
                         <select class="browser-default custom-select" name="" id="">
                             <option value="">eau</option>
@@ -140,9 +110,9 @@ include("header.php")
                     <div class="row justify-content-center">
                         <button type="submit" class="btn btn-outline-default waves-effect">Recherche</button>
                     </div>
-                </form> -->
+                </form>
 
-                <!-- <p class="text-center pt-5">Il est résistant contre les types:</p>
+                <p class="text-center pt-5">Il est résistant contre les types:</p>
 
                 <div class="ml-0 my-2 my-lg-0 row justify-content-around pt-3 pb-5 container">
                     <select class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 col-lg-2 browser-default custom-select"
@@ -199,28 +169,7 @@ include("header.php")
                         <option value="">feu</option>
                     </select>
                 </div>
-            </div> -->
-            <?php 
-            // form
-            require_once('./models/form.php');
-            $form = new Formulaire($_GET);
-            require ('template/form3.html.php');
-
-            if( isset($_GET['type3'])){
-                $type = $_GET['type3'];
-                
-                } else { $type = '';
-                }
-            if($type != ''){
-                
-            // require 'pdo.php';
-            require_once('./models/Pokemon.php');
-            $pokemon = new Pokemon(); 
-            $listeParType = $pokemon->selectionPokemonParType($type);
-            require ('template/listeParType3.html.php');
-            }
-            echo "<div class='d-flex justify-content-center font-size1 font-weight-bold mt-4'>".$type."</div>" ;
-            ?>
+            </div>
 
 
 
@@ -228,7 +177,9 @@ include("header.php")
 
 
 
-            <!-- <div class="bg-white mt-5 p-4">
+
+
+            <div class="bg-white mt-5 p-4">
                 <p class="text-center font-weight-bolder pt-4">Liste de tous les pokémon par type:</p>
 
                 <div class="row mt-5 w60">
@@ -358,7 +309,7 @@ include("header.php")
 
                 </div>
 
-            </div> -->
+            </div>
 
 
 
@@ -369,3 +320,7 @@ include("header.php")
     <?php   
 include("footer.php")
 ?>
+
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 <?php
 function getpdo(){
     try {
-    $connect = new PDO('mysql:host=localhost;dbname=pokemon;', 'root', '123pomme',array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+    $connect = new PDO('mysql:host=localhost;dbname=pokemon;', 'root', 't4q8h\s6A^8Gk)$ykyHT%d[S&TGCh%.GL\&ojp[P',array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     //$dbh = null; 
     //retourne pas de résultat donc on créer des exceptions 
     } catch (PDOException $e) {
@@ -26,5 +26,11 @@ function getpdo(){
     //         echo $resultrow1['nom_type'];
     //     }
     // }
+
+                // $sql2 = "select * FROM esttype inner join pokemon on esttype.id_pok = pokemon.id_pok where esttype.type_pok='".$resultrow1['nom_type']."'"; //instruction/requete sql
+            // $result2=$this->pdo->query($sql2); //demande a la base de donnée de executer la requete
+            // while ($resultrow2=$result2->fetch(PDO::FETCH_ASSOC)) {
+            //     echo "<p>".$resultrow2['nom_pok']."</p>";
+            // }
 
 

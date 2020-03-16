@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Cormorant+Garamond|Crimson+Text|Forum|Nanum+Myeongjo|Roboto&display=swap');
+
+header {
+  /* The image used */
+  background-image: url("images/banniere.PNG");
+
+  /* Full height */
+  height: 300px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+h1 {
+  font-size: 1.8rem;
+  font-family: 'Bad Script', cursive;
+}
+h2 {
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+}
+h3 {
+  font-size: 1.8rem;
+  font-family: 'Bad Script', cursive;
+  text-transform: uppercase;
+  width: 33%;
+  padding-top: 7px;
+}
+.poketype{
+  position: absolute;
+  top: 150px;
+  right: 230px;
+  width: 250px;
+  height: auto;
+}
+.button-rechercher {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 2px solid black;
+  margin-top: 2rem;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+}
+.button-rechercher:hover {
+  background-color: rgb(57, 126, 255);
+  color: white;
+  border: 2px solid white;
+}
+.pt-6 {
+  padding-top: 50px;
+}
+.p-10 {
+  padding: 30px;
+}
+li:last-child span {
+  display: none;
+}
+.font-size1 {
+  font-size: 1.5rem;
+}
