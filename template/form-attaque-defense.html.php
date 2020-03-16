@@ -4,6 +4,7 @@
 ?>
 <form action="admin.php" method="GET">
     <?php
+    echo $form->inputHidden('hidden','text');
     $listeType = $pokemon->selectionType();
     require ('template/ajout-attaques.html.php');
     $listeType = $pokemon->selectionType();

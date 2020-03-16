@@ -8,7 +8,7 @@
     }
     require_once('./models/Pokemon.php');
     $pokemon = new Pokemon(); 
-        
+    //s'il existe un nouveau type de pokémon alors ajouter le à la table "type" et créer une nouvelle table avec son nom, créer ensuite les liaisons
     if($type != ''){
         $ajoutType = $pokemon->ajoutType($type);
         $creationTableType = $pokemon->creationTableType($type);
@@ -16,8 +16,14 @@
         require_once('./models/Pokemon.php');
     } 
     require ('template/ajout-type.html.php');
+    //si on a sélectionner un type de pokémon à modifier, alors les inputs s'affichent
     require ('template/form-modif.html.php');
-    require ('template/form-attaque-defense.html.php')
+    if( isset($_GET['type2'])){
+        $type = $_GET['type2'];
+        require ('template/form-attaque-defense.html.php');
+
+       } else { $type = '';
+    }
 
 
 ?>

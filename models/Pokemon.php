@@ -67,6 +67,12 @@ class Pokemon {
         $result7 = $this->pdo->query($sqlAlterTable);
         return $result7;
     }
+       // fonction qui crée la relation entre les tables
+       public function ajoutDefAttaqueType($type){
+        $sqlAjoutDefAttaque = "INSERT INTO ".$type."(`id_type_tab`, `offensif`, `defensif`) VALUES ('',[value-2],[value-3])";
+        $result8 = $this->pdo->query($sqlAjoutDefAttaque);
+        return $result8;
+    }
 
 
 }

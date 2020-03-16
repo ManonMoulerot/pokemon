@@ -33,7 +33,14 @@ class Formulaire
     {
         return "<label for='".$name."'>".$name." : </label><input type='".$type."' name='".$name."' id='".$name."' value='". $this->getValue($name) ."'></br>";
     }
-
+    public function input2($name,$type) // Une méthode qui popera les inputs
+    {
+        return "<input type='".$type."' name='".$name."' id='".$name."' value='". $this->getValue($name) ."' required></br>";
+    }
+    public function inputHidden($name,$type) // Une méthode qui popera les inputs
+    {
+        return "<input type='hidden' name='".$name."' id='".$name."' value='". $_GET['type2'] ."'></br>";
+    }
     // public function getTypeForm($type){
     //     isset($this->$_GET['type']) ? $_GET['type'] = $type : $type=null;
     //     // var_dump($type)
