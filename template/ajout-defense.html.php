@@ -1,3 +1,4 @@
+<h3>ajouter les statistiques de défense contre tous les types :</h3>
 <?php
     require_once('./models/Pokemon.php');
     $pokemon = new Pokemon();
