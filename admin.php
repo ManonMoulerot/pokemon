@@ -21,13 +21,24 @@
     if( isset($_GET['type2'])){
         $type = $_GET['type2'];
         require ('template/form-attaque-defense.html.php');
-        if(isset($_GET['hidden'])){
-            $ajoutDefAttaque = $pokemon->ajoutDefAttaqueType($type);
-        }
+        // $ajoutDefAttaque = $pokemon->ajoutDefAttaqueType($type);
        } else { 
            $type = '';
-    }
 
-
+     }
+     if(isset($_GET['hidden'])){
+        $type2 = $_GET['hidden'];
+        $idType = $_GET['id_type'];
+        $attaque = $_GET['attaque'];
+        $defense = $_GET['defense'];
+        $ajoutDefAttaque = $pokemon->ajoutDefAttaqueType($type2,$idType,$attaque,$defense);
+        // require ('template/form-attaque-defense.html.php');
+        require_once('./models/Pokemon.php');
+        }else { 
+            $type2 = '';
+            $idType= '';
+            $attaque='';
+            $defense='';
+  }
 ?>
 

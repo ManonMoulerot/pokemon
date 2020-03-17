@@ -39,7 +39,7 @@ class Formulaire
     }
     public function inputHidden($name,$hidden) // Une méthode qui popera les inputs
     {
-        $hidden = $_GET['type2'];
+        // $hidden = $_GET['type2'];
         return "<input type='hidden' name='".$name."' id='".$name."' value='". $hidden ."'></br>";
     }
     public function inputHidden2($hidden) // Une méthode qui popera les inputs
