@@ -208,7 +208,6 @@ include("header.php")
 
             if( isset($_GET['type3'])){
                 $type = $_GET['type3'];
-                
                 } else { $type = '';
                 }
             if($type != ''){
@@ -218,8 +217,9 @@ include("header.php")
             $pokemon = new Pokemon(); 
             $listeParType = $pokemon->selectionPokemonParType($type);
             require ('template/listeParType3.html.php');
-            }
             echo "<div class='d-flex justify-content-center font-size1 font-weight-bold mt-4'><img src='img/".$type.".png' alt='".$type."'></div>" ;
+
+            }
             ?>
 
 
