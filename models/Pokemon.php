@@ -81,32 +81,38 @@ class Pokemon {
         // $sqlAjoutDefAttaque = "INSERT INTO `".$type2."`(`id_type_tab`, `offensif`, `defensif`) VALUES (".$idType.",".$attaque.",".$defense.")";
         // $result8 = $this->pdo->query($sqlAjoutDefAttaque);
            
-        // $result8 = $this->pdo->prepare("INSERT INTO `".$type2."`(`id_type_tab`, `offensif`, `defensif`) VALUES (:id_type_tab, :offensif, :defensif)");
-//    $result8->fetch(PDO::FETCH_ASSOC); 
-        // $result8->execute(array(
-        //     'id_type_tab' => $idType,
-        //     'offensif'=> $attaque,
-        //     'defensif' => $defense )
-        // );
-// $rqt = "INSERT INTO maTable(bla,bli,blo)";
-// $rqt = " VALUES ";
-// $rqt = "(:bla,:bli,:blo)";
-$result8 = $this->pdo->prepare("INSERT INTO `".$type2."`(`id_type_tab`, `offensif`, `defensif`) VALUES (:id_type_tab, :offensif, :defensif)");
- $result8->execute(array(
+        $result8 = $this->pdo->prepare("INSERT INTO `".$type2."`(`id_type_tab`, `offensif`, `defensif`) VALUES (:id_type_tab, :offensif, :defensif)");
+   $result8->fetch(PDO::FETCH_ASSOC); 
+        $result8->execute(array(
             'id_type_tab' => $idType,
             'offensif'=> $attaque,
             'defensif' => $defense )
         );
-foreach ($result8 AS $key =>$value) {
-    //parcours des lignes
-    echo "{$key} => {$value} ";
-    print_r($result8);
-    }//fin foreach ligne
 
-  
- 
-        return $result8;
+// $result8 = $this->pdo->prepare("INSERT INTO `".$type2."`(`id_type_tab`, `offensif`, `defensif`) VALUES (:id_type_tab, :offensif, :defensif)");
+
+//  $result8->execute(array(
+//             'id_type_tab' => $idType,
+//             'offensif'=> $attaque,
+//             'defensif' => $defense )
+//         );
+// foreach ($result8 AS $key =>$value) {
+//     //parcours des lignes
+//     echo "{$key} => {$value} ";
+//     print_r($result8);
+//     }//fin foreach ligne
+
+// foreach($result8 AS $key =>$value){
+//    $result8->fetch(PDO::FETCH_ASSOC); 
+//         $result8->execute(array(
+//             'id_type_tab' => $idType,
+//             'offensif'=> $attaque,
+//             'defensif' => $defense )
+//         );
+
+
+    return $result8;
     }
 
-
+       
 }

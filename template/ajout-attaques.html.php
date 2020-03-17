@@ -3,6 +3,7 @@
     require_once('./models/Pokemon.php');
     $pokemon = new Pokemon();
     while ($resultrow=$listeType->fetch(PDO::FETCH_ASSOC)) {
+        echo "<form action='admin.php' method='GET'>";
         echo "<img src='".$resultrow['img_type']."' id='".$resultrow['id_type']."'/>";
         $type2 = $resultrow['id_type'];
         echo $type2;
@@ -10,5 +11,7 @@
         echo $form->input2('attaque','text');
         echo $form->input2('defense','text');
         // echo $form->input2($idType,'text');
+        echo $form->submit();
+        echo "</form></br>";
 
     }
