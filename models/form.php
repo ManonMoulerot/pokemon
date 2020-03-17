@@ -33,7 +33,19 @@ class Formulaire
     {
         return "<label for='".$name."'>".$name." : </label><input type='".$type."' name='".$name."' id='".$name."' value='". $this->getValue($name) ."'></br>";
     }
-
+    public function input2($name,$type) // Une méthode qui popera les inputs
+    {
+        return "<input type='".$type."' name='".$name."' id='".$name."' value='". $this->getValue($name) ."' required></br>";
+    }
+    public function inputHidden($name,$hidden) // Une méthode qui popera les inputs
+    {
+        $hidden = $_GET['type2'];
+        return "<input type='hidden' name='".$name."' id='".$name."' value='". $hidden ."'></br>";
+    }
+    public function inputHidden2($hidden) // Une méthode qui popera les inputs
+    {
+        return "<input type='hidden' name='id_type' value='". $hidden ."'></br>";
+    }
     // public function getTypeForm($type){
     //     isset($this->$_GET['type']) ? $_GET['type'] = $type : $type=null;
     //     // var_dump($type)
@@ -43,7 +55,7 @@ class Formulaire
     
     public function submit() // Une méthode qui un submit
     {
-       return '<input type="submit" class="button-rechercher" value="Rechercher">';
+       return '<input type="submit" value="envoyer">';
     }    
 }  
 
