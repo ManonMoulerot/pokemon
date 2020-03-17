@@ -4,8 +4,8 @@
 ?>
 <!-- <form action="admin.php" method="GET"> -->
     <?php
-    $hidden = $_GET['type2'];
-    echo $form->inputHidden('hidden',$hidden);
+    // $hidden = $_GET['type2'];
+    // echo $form->inputHidden('hidden',$hidden);
     $listeType = $pokemon->selectionType();
     require ('template/ajout-attaques.html.php');
     // $listeType = $pokemon->selectionType();
