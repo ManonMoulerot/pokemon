@@ -44,12 +44,14 @@
                 require ('template/form1.html.php');
                 if( isset($_GET['type'])){
                     $type = $_GET['type'];
+                    echo "<div class='d-flex justify-content-center font-size1 font-weight-bold mt-4'><img src='img/".$type.".png' alt='".$type."'></div>" ;
                    } else { $type = '';
                    }
                if($type != ''){
                 require_once('./models/Pokemon.php');
-                $pokemon = new Pokemon(); 
-                $listePokemonDefensif = $pokemon->selectionPlusresistDefensif($type, '2', '2');
+                $pokemon = new Pokemon();
+                $str = mb_strtolower($type); 
+                $listePokemonDefensif = $pokemon->selectionPlusresistDefensif($str, '2', '2');
                 require ('template/liste-defensif-list.html.php');
                }
                 ?>
@@ -67,10 +69,10 @@
                    } else { $type = '';
                    }
                if($type != ''){
-
-                $listePokemonDefensif2_1 = $pokemon->selectionPlusresistDefensif($type, '0.5', '0');
+                $str = mb_strtolower($type);
+                $listePokemonDefensif2_1 = $pokemon->selectionPlusresistDefensif($str, '0.5', '0');
                 require ('template/liste-defensif2.1.html.php');
-                $listePokemonDefensif_1 = $pokemon->selectionPlusresistDefensif($type, '2', '2');
+                $listePokemonDefensif_1 = $pokemon->selectionPlusresistDefensif($str, '2', '2');
                 require ('template/liste-defensif.1.html.php');
                 }
                 ?>
