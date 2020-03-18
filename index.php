@@ -30,18 +30,9 @@
             width:25%!important;
         }
     </style>
-
-    
 </head>
-
 <body>
-
-
-
-<?php   
-include("header.php")
-?>
-
+<?php  include("header.php"); ?>
     <section class="container-fluid bg-beige pb-5">
         <div class="container mb-5">
             <h1 class="text-center font-weight-bolder pt-6">Bienvenue sur l'application Poketype</h1>
@@ -62,54 +53,8 @@ include("header.php")
                 require ('template/liste-defensif-list.html.php');
                }
                 ?>
-                <!-- <input type="submit"> -->
-                <!-- <form action="" method="post">
-                    <div class=" row justify-content-center pt-3 pb-5">
-                        <select class="browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                            <option value="">feu</option>
-                            <option value="">françois</option>
-                        </select>
-                    </div>
-                    <div class="row justify-content-center">
-                        <button type="submit" class="btn btn-outline-default waves-effect">Recherche</button>
-                    </div>
-                </form> -->
 
-                <!-- <p class="text-center pt-5">Pour taper fort je doit utiliser un pokemon de type:</p> -->
-
-                <!-- <div class="ml-0 my-2 my-lg-0 row justify-content-center pt-3 pb-5 container">
-                    <select class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 col-lg-2 browser-default custom-select"
-                        name="" id="">
-                        <option value="">françois++</option>
-                    </select>
-                    <div class="my-2 my-lg-0 text-center col-2 col-xs-2 col-md-2 col-lg-1">OU</div>
-                    <select class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 col-lg-2 browser-default custom-select"
-                        name="" id="">
-
-                        <option value="">françois</option>
-                    </select>
-                    <div
-                        class="my-2 my-lg-0 text-center col-2 col-xs-2 col-md-2 col-lg-1 d-xs-block d-md-none d-lg-block">
-                        OU</div>
-                    <select
-                        class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 text-center  col-lg-2 browser-default custom-select"
-                        name="" id="">
-                        <option value="">eau</option>
-                    </select>
-                    <div class="my-2 my-lg-0 text-center col-2 col-xs-2 col-md-2 col-lg-1">OU</div>
-                    <select class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 col-lg-2 browser-default custom-select"
-                        name="" id="">
-
-                        <option value="">feu</option>
-                    </select>
-                </div> -->
             </div>
-
-
-
-
-
             <div class="bg-white mt-5 p-4">
                 <?php 
                 require_once('./models/form.php');
@@ -129,77 +74,6 @@ include("header.php")
                 require ('template/liste-defensif.1.html.php');
                 }
                 ?>
-                <!-- <form action="" method="post">
-                    <div class="row justify-content-center pt-3 pb-5">
-                        <select class="browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                            <option value="">feu</option>
-                            <option value="">françois</option>
-                        </select>
-                    </div>
-                    <div class="row justify-content-center">
-                        <button type="submit" class="btn btn-outline-default waves-effect">Recherche</button>
-                    </div>
-                </form> -->
-
-                <!-- <p class="text-center pt-5">Il est résistant contre les types:</p>
-
-                <div class="ml-0 my-2 my-lg-0 row justify-content-around pt-3 pb-5 container">
-                    <select class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 col-lg-2 browser-default custom-select"
-                        name="" id="">
-                        <option value="">françois</option>
-                    </select>
-                    <div class="my-2 my-lg-0 text-center col-2 col-xs-2 col-md-2 col-lg-1">ET</div>
-                    <select class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 col-lg-2 browser-default custom-select"
-                        name="" id="">
-                        <option value="">eau</option>
-                        <option value="">feu</option>
-                        <option value="">françois</option>
-                    </select>
-                    <div
-                        class="my-2 my-lg-0 text-center col-2 col-xs-2 col-md-2 col-lg-1 d-xs-block d-md-none d-lg-block">
-                        ET</div>
-                    <select class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 col-lg-2 browser-default custom-select"
-                        name="" id="">
-                        <option value="">eau</option>
-                    </select>
-                    <div class="my-2 my-lg-0 text-center col-2 col-xs-2 col-md-2 col-lg-1">ET</div>
-                    <select class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 col-lg-2 browser-default custom-select"
-                        name="" id="">
-                        <option value="">eau</option>
-                        <option value="">feu</option>
-                    </select>
-                </div>
-
-                <p class="text-center pt-5">Il est faible contre les types:</p>
-
-                <div class="ml-0 my-2 my-lg-0 row justify-content-around pt-3 pb-5 container">
-                    <select class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 col-lg-2 browser-default custom-select"
-                        name="" id="">
-                        <option value="">françois</option>
-                    </select>
-                    <div class="my-2 my-lg-0 text-center col-2 col-xs-2 col-md-2 col-lg-1">ET</div>
-                    <select class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 col-lg-2 browser-default custom-select"
-                        name="" id="">
-                        <option value="">eau</option>
-                        <option value="">feu</option>
-                        <option value="">françois</option>
-                    </select>
-                    <div
-                        class="my-2 my-lg-0 text-center col-2 col-xs-2 col-md-2 col-lg-1 d-xs-block d-md-none d-lg-block">
-                        ET</div>
-                    <select class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 col-lg-2 browser-default custom-select"
-                        name="" id="">
-                        <option value="">eau</option>
-                    </select>
-                    <div class="my-2 my-lg-0 text-center col-2 col-xs-2 col-md-2 col-lg-1">ET</div>
-                    <select class="my-2 my-lg-0 col-12 col-xs-12 col-md-5 col-lg-2 browser-default custom-select"
-                        name="" id="">
-                        <option value="">eau</option>
-                        <option value="">feu</option>
-                    </select>
-                </div>
-            </div> -->
             <?php 
             // form
             require_once('./models/form.php');
@@ -211,161 +85,14 @@ include("header.php")
                 } else { $type = '';
                 }
             if($type != ''){
-                
             // require 'pdo.php';
             require_once('./models/Pokemon.php');
             $pokemon = new Pokemon(); 
             $listeParType = $pokemon->selectionPokemonParType($type);
             require ('template/listeParType3.html.php');
             echo "<div class='d-flex justify-content-center font-size1 font-weight-bold mt-4'><img src='img/".$type.".png' alt='".$type."'></div>" ;
-
             }
             ?>
-
-
-
-
-
-
-
-            <!-- <div class="bg-white mt-5 p-4">
-                <p class="text-center font-weight-bolder pt-4">Liste de tous les pokémon par type:</p>
-
-                <div class="row mt-5 w60">
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class=" browser-default custom-select" name="" id="">
-                            <option value="">françois</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class="justify-content-center browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                            <option value="">feu</option>
-                            <option value="">françois</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class="justify-content-center browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class="justify-content-center browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                            <option value="">feu</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class="justify-content-center browser-default custom-select" name="" id="">
-                            <option value="">françois</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class=" browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                            <option value="">feu</option>
-                            <option value="">françois</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class=" browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class=" browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                            <option value="">feu</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class=" browser-default custom-select" name="" id="">
-                            <option value="">françois</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class=" browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                            <option value="">feu</option>
-                            <option value="">françois</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class=" browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class=" browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                            <option value="">feu</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class=" browser-default custom-select" name="" id="">
-                            <option value="">françois</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class=" browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                            <option value="">feu</option>
-                            <option value="">françois</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class=" browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 my-2 row justify-content-center">
-                        <select class="browser-default custom-select" name="" id="">
-                            <option value="">eau</option>
-                            <option value="">feu</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-6 my-2 row justify-content-center ">
-                        <select class=" browser-default custom-select w25" name="" id="">
-                            <option value="">françois</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-6 my-2 row justify-content-center">
-                        <select class="browser-default custom-select w25" name="" id="">
-                            <option value="">eau</option>
-                            <option value="">feu</option>
-
-                        </select>
-                    </div>
-
-
-                </div>
-
-            </div> -->
-
-
-
         </div>
     </section>
-
-
-    <?php   
-include("footer.php")
-?>
+<?php include("footer.php"); ?>
