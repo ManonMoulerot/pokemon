@@ -45,7 +45,7 @@ include("header.php")
     <section class="container-fluid bg-beige pb-5">
         <div class="container mb-5">
             <h1 class="text-center font-weight-bolder pt-6">Bienvenue sur l'application Poketype</h1>
-            <h2 class="text-center mt-4 mb-5">l'appli qui te permet de savoir quel pokémon utiliser contre tes adversaires !</h2>
+            <h2 class="text-center mt-4 mb-5">L'appli qui te permet de savoir quel pokémon utiliser contre tes adversaires !</h2>
             <div class="bg-white py-4">
                 <?php 
                 require_once('./models/form.php');

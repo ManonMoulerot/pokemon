@@ -15,7 +15,7 @@ header {
   position: relative;
 }
 h1 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-family: 'Bad Script', cursive;
 }
 h2 {
@@ -62,3 +62,7 @@ li:last-child span {
 .font-size1 {
   font-size: 1.5rem;
 }
+
+input[type="submit"]{
+  margin-top: 20px;
+ }

@@ -68,23 +68,50 @@ class Pokemon {
         return $result7;
     }
        // fonction qui crée la relation entre les tables
-       public function ajoutDefAttaqueType($type){
-        $type = $_GET['hidden'];
-        $idType = $_GET['id_type'];
-        $attaque = $_GET['attaque'];
-        $defense = $_GET['defense'];
- echo $idType;
-        $tab = array(
+       public function ajoutDefAttaqueType($type2,$idType,$attaque,$defense){
+        // $tab = array(
+        //     'id_type_tab' => $idType,
+        //     'offensif'=> $attaque,
+        //     'defensif' => $defense );
+        // $sqlAjoutDefAttaque = "INSERT INTO '".$type2."'(:id_type_tab, :offensif, :defensif)";
+        // $result8 = $this->pdo->prepare($sqlAjoutDefAttaque);
+           //  $result8->execute($tab);
+
+        //fonction qui marche
+        // $sqlAjoutDefAttaque = "INSERT INTO `".$type2."`(`id_type_tab`, `offensif`, `defensif`) VALUES (".$idType.",".$attaque.",".$defense.")";
+        // $result8 = $this->pdo->query($sqlAjoutDefAttaque);
+           
+        $result8 = $this->pdo->prepare("INSERT INTO `".$type2."`(`id_type_tab`, `offensif`, `defensif`) VALUES (:id_type_tab, :offensif, :defensif)");
+   $result8->fetch(PDO::FETCH_ASSOC); 
+        $result8->execute(array(
             'id_type_tab' => $idType,
             'offensif'=> $attaque,
-            'defensif' => $defense );
-        $sqlAjoutDefAttaque = "INSERT INTO ".$type." values (:id_type_tab, :offensif, :defensif)";
-        // $result8 = $this->pdo->query($sqlAjoutDefAttaque);
-        $result8 = $this->pdo->prepare($sqlAjoutDefAttaque);
-        $result8->execute($tab);
-        
-        return $result8;
+            'defensif' => $defense )
+        );
 
+// $result8 = $this->pdo->prepare("INSERT INTO `".$type2."`(`id_type_tab`, `offensif`, `defensif`) VALUES (:id_type_tab, :offensif, :defensif)");
+
+//  $result8->execute(array(
+//             'id_type_tab' => $idType,
+//             'offensif'=> $attaque,
+//             'defensif' => $defense )
+//         );
+// foreach ($result8 AS $key =>$value) {
+//     //parcours des lignes
+//     echo "{$key} => {$value} ";
+//     print_r($result8);
+//     }//fin foreach ligne
+
+// foreach($result8 AS $key =>$value){
+//    $result8->fetch(PDO::FETCH_ASSOC); 
+//         $result8->execute(array(
+//             'id_type_tab' => $idType,
+//             'offensif'=> $attaque,
+//             'defensif' => $defense )
+//         );
+
+
+    return $result8;
     }
 
 

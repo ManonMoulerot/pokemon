@@ -37,7 +37,29 @@
         $test = $form->fichier('../pokemon/img/',$_FILES['file']['name'],$_POST['type']);
     }
 
+    //si on a sélectionner un type de pokémon à modifier, alors les inputs s'affichent
     require ('template/form-modif.html.php');
-    require ('template/form-attaque-defense.html.php')
+    if( isset($_GET['type2'])){
+        $type = $_GET['type2'];
+        require ('template/form-attaque-defense.html.php');
+        // $ajoutDefAttaque = $pokemon->ajoutDefAttaqueType($type);
+       } else { 
+           $type = '';
+
+     }
+     if(isset($_GET['hidden'])){
+        $type2 = $_GET['hidden'];
+        $idType = $_GET['id_type'];
+        $attaque = $_GET['attaque'];
+        $defense = $_GET['defense'];
+        $ajoutDefAttaque = $pokemon->ajoutDefAttaqueType($type2,$idType,$attaque,$defense);
+        // require ('template/form-attaque-defense.html.php');
+        require_once('./models/Pokemon.php');
+        }else { 
+            $type2 = '';
+            $idType= '';
+            $attaque='';
+            $defense='';
+  }
 
 ?>

@@ -55,7 +55,7 @@ class Formulaire
     
     public function submit() // Une méthode qui un submit
     {
-       return '<input type="submit" value="envoyer">';
+       return '<input class="btn btn-outline-primary waves-effect" type="submit" value="envoyer">';
     }
     
     public function inputFichier() // Une méthode qui pop un input file et son bouton
