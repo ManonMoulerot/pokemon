@@ -1,7 +1,7 @@
 <?php
 function getpdo(){
     try {
-    $connect = new PDO('mysql:host=localhost;dbname=manonm_pokemon;', 'manonm', 'kFDlwZ1CoC30jg==',array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+    $connect = new PDO('mysql:host=localhost;dbname=manonm_pokemon;', '', '',array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     //$dbh = null; 
     //retourne pas de résultat donc on créer des exceptions 
     } catch (PDOException $e) {
